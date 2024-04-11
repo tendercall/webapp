@@ -93,7 +93,6 @@ function initComponents() {
   //
 }
 
-
 function switchContent() {
   const target = document.querySelectorAll('[data-switch]')
   if (!target) return;

@@ -18,11 +18,17 @@
   <meta name="description" content="Tendercall - No.1 service provider platform in Kerala, that connects with customers and vendors by offering wide opportunities in diverse categories.">
   <link rel="canonical" href="https://tendercall.com"/>
 
-  <meta property="og:title" content="TenderCall">
-  <meta property="og:description" content="Find and respond to tender calls efficiently with TenderCall.">
+  <!--open graph tags and twitter (X) cards tags-->
+  <meta property="og:title" content="Tendercall : The Best Mobile platform">
+  <meta property="og:description" content="The best mobile platform that connects with customers and vendors by offering a endless opportunities in diverse categories.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tendercall.com">
   <meta property="og:image" content="https://tendercall.com/image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@tendercall">
+  <meta name="twitter:title" content="Tendercall : The Best Mobile platform">
+  <meta name="twitter:description" content="The best mobile platform that connects with customers and vendors by offering a endless opportunities in diverse categories.">
+  <meta name="twitter:image" content="https://tendercall.com/image.jpg">
 
   <!-- Google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -152,8 +158,25 @@
             <div class="col-auto">
               <div class="header__right">
                 <div class="md:d-none">
+                  <button id="downloadButton">Download App</button>
+                    <script>
+                        document.getElementById('downloadButton').onclick = function() {
+                        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-                  <a href="https://play.google.com/store/apps/details?id=com.tendercall.moc&pli=1" class="button -sm -dark text-white ml-12">Get the App</a>
+                        // Redirect to Google Play Store if the user is on an Android device
+                        if (/android/i.test(userAgent)) {
+                            window.location.href = 'https://play.google.com/store/apps/details?id=your.package.name';
+                        } 
+                        // Redirect to Apple App Store if the user is on an iOS device
+                        else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                             window.location.href = 'https://apps.apple.com/app/your-app-name/idyourappid';
+                        } 
+                        // For other devices, display a message indicating that the app is not available
+                         else {
+                             alert("Sorry, the app is not available for your device.");
+                        }
+                      };
+                    </script>
                 </div>
 
                 <div class="header__menu justify-center items-center relative d-none md:d-flex">
